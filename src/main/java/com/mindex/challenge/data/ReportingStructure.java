@@ -62,7 +62,7 @@ public class ReportingStructure {
         return "{employee='" + this.employee + "', numberOfReports='" + this.numberOfReports + "'}";
     }
 
-    // Default java object function implementations.
+    //=====================Default java object function implementations.==================
 
     //overrides hashcode function to use employee and numberOfReports
     @Override

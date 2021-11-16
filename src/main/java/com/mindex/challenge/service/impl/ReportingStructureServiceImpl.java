@@ -43,6 +43,15 @@ public class ReportingStructureServiceImpl implements ReportingStructureService{
         }
     }
 
+    /**
+     * This function implements the interface function read.
+     * It gets the employee object from the employeeService,
+     * and then calls the above recursive function to find the
+     * count of reports for that employee, given the employee
+     * direct reports list.
+     * 
+     * Returns a ReportingStructure with the proper employee and numberofreports.
+     */
     @Override
     public ReportingStructure read(String employeeId) {
 
