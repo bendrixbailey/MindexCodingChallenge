@@ -59,7 +59,7 @@ public class ReportingStructure {
 
     //returns string of object in json compatible format
     public String getJson(){
-        return "{employee='" + this.employee + "', numberOfReports='" + this.numberOfReports + "'}";
+        return "{employee='" + this.employee.getFirstName() + this.employee.getLastName() + "', numberOfReports='" + this.numberOfReports + "'}";
     }
 
     //=====================Default java object function implementations.==================

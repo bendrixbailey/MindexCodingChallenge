@@ -15,7 +15,7 @@ public class ReportingStructureController {
     private ReportingStructureService reportingService;
 
     //this is the route and parameter required for the get request.
-    @GetMapping("/reportingStructure{id}")
+    @GetMapping("/reportingStructure/{id}")
     public ReportingStructure read(@PathVariable String id){
         LOG.debug("Recieved reporting structure create request for id [{}]", id);
 

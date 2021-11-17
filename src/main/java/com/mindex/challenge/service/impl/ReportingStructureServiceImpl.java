@@ -37,7 +37,8 @@ public class ReportingStructureServiceImpl implements ReportingStructureService{
         }else{                  //else, add list to total, and for each employee in list, call function again and add to total
             total += reports.size();
             for(Employee emp : reports){
-                total += calculateReports(emp.getDirectReports());
+                Employee newEmp = employeeService.read(emp.getEmployeeId());    //get employee to get their reports
+                total += calculateReports(newEmp.getDirectReports());
             }
             return total;
         }
@@ -61,7 +62,7 @@ public class ReportingStructureServiceImpl implements ReportingStructureService{
 
         List<Employee> reports = employee.getDirectReports();
 
-        int numberOfReports = 1 + calculateReports(reports);
+        int numberOfReports = calculateReports(reports);
 
         return new ReportingStructure(employee, numberOfReports);
     }
