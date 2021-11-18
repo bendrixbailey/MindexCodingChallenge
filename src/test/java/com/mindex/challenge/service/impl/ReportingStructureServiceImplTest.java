@@ -14,6 +14,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Test file to run through the ReportingStrucutre Rest endpoing.
+ * Tests to make sure the creation works and that the endpoint returns a proper number of 
+ * reports.
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ReportingStructureServiceImplTest {

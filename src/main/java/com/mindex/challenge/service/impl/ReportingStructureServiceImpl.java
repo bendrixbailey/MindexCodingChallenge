@@ -12,6 +12,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Implementation of the ReportingStructureService. Implements the
+ * read function, and uses a recursive function to find the total number
+ * of employees that directly/indirectly report to the given employee.
+ * Example data only has a depth of 2, but this will work for any depth.
+ */
 @Service
 public class ReportingStructureServiceImpl implements ReportingStructureService{
     private static final Logger LOG = LoggerFactory.getLogger(ReportingStructureServiceImpl.class);
