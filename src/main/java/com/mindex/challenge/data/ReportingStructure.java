@@ -45,21 +45,10 @@ public class ReportingStructure {
         this.numberOfReports = newNumberOfReports;
     }
 
-    //updates employee, and returns updated structure
-    public ReportingStructure updateEmployeeAndReturn(Employee employee){
-        this.employee = employee;
-        return this;
-    }
-
-    //updates numberofreports and returns updated structure
-    public ReportingStructure updateNumberOfReportsAndReturn(int numberofReports){
-        this.numberOfReports = numberofReports;
-        return this;
-    }
-
     //returns string of object in json compatible format
     public String getJson(){
-        return "{employee='" + this.employee.getFirstName() + this.employee.getLastName() + "', numberOfReports='" + this.numberOfReports + "'}";
+        return "{employee :'" + this.employee.getFirstName() + this.employee.getLastName() 
+                + "', numberOfReports : '" + this.numberOfReports + "'}";
     }
 
     //=====================Default java object function implementations.==================
@@ -81,7 +70,7 @@ public class ReportingStructure {
     public boolean equals(Object o){
         if(o instanceof ReportingStructure){
             ReportingStructure instance = (ReportingStructure) o;
-            return (instance.employee == this.employee) && (instance.numberOfReports == this.numberOfReports);
+            return (instance.getEmployee() == this.employee) && (instance.getNumberOfReports() == this.numberOfReports);
         }else{
             return false;
         }
